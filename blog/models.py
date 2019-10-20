@@ -17,3 +17,12 @@ class Post(models.Model):
     def __str__(self):
         return self.customername
 
+class Update(models.Model):
+    
+    token = models.IntegerField()
+    givenamount = models.CharField(max_length=200)
+    given_date = models.DateTimeField(default=timezone.now)
+
+   
+    def __str__(self):
+        return self.givenamount

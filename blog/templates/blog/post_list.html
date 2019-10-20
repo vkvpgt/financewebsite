@@ -9,7 +9,8 @@
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.customername }}</a></h2>
             <p>{{ post.amount|linebreaksbr }}</p>
             <a href="{% url 'post_delete' pk=post.pk %}" ><span class="glyphicon glyphicon-trash"></span></a>
-            <span class="glyphicon glyphicon-refresh"></span>
+            <a href="{% url 'post_update' pk=post.pk %}" ><span class="glyphicon glyphicon-refresh"></span></a>
+           
         </div>
     {% endfor %}
 {% endblock %}

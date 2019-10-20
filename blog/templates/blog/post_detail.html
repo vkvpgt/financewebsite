@@ -9,6 +9,14 @@
         {% endif %}
         <a href="{% url 'post_edit' pk=post.pk %}" ><span class="glyphicon glyphicon-pencil"></span></a>
         <h2>{{ post.customername }}</h2>
+        {% for post in post1%}
+        
+        <p>{{post.givenamount}}</p>
+        {{post.given_date}}
+        {% endfor %}
+       
+        {{sum1}}
+        
         <p>{{ post.amount|linebreaksbr }}</p>
     </div>
 {% endblock %}
